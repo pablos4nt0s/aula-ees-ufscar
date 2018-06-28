@@ -1,0 +1,29 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "hello world",
+            "author": "Pablo"
+        },
+        {
+            "id": 2,
+            "title": "node beginner",
+            "author": "Alexandre"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        },
+        {
+            "id": 2,
+            "body": "another comment",
+            "postId": 2
+        }
+    ],
+    "profile": {
+        "name": "Pablo"
+    }
+}
