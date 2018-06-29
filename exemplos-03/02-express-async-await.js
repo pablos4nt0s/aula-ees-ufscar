@@ -8,7 +8,7 @@ const app = express();
 
 async function getAuthorAsync(authorname) {
     const res = await axios.get(`http://localhost:3004/authors?name=${authorname}`);
-    return { author: await res.data[0], found: res.status === 200 && res.data.length === 1 };
+    return { author: res.data[0], found: res.status === 200 && res.data.length === 1 };
 }
 
 async function getObjectAsync(url) {
