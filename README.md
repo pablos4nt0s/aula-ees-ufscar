@@ -36,3 +36,5 @@ Exemplos da Aula de Node.js no Curso de Especialização em Engenharia de Softwa
 ### `$ babel-node ./exemplos-02/05-async-await-a.js`
 
 ### `$ babel-node ./exemplos-02/06-async-await-b.js`
+
+### `$ babel-node ./exemplos-02/07-express.js`

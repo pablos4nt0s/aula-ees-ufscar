@@ -23,7 +23,35 @@
             "postId": 2
         }
     ],
-    "profile": {
-        "name": "Pablo"
-    }
+    "authors": [
+        {
+            "id": 1,
+            "name": "Pablo",
+            "posts_url": "http://localhost:3004/posts?author=Pablo",
+            "followers_url": "http://localhost:3004/followers?author_id=1"
+        },
+        {
+            "id": 2,
+            "name": "Alexandre",
+            "posts_url": "http://localhost:3004/posts?author=Alexandre",
+            "followers_url": "http://localhost:3004/followers?author_id=2"
+        }
+    ],
+    "followers": [
+        {
+            "id": 3,
+            "name": "Paulo",
+            "author_id": 1
+        },
+        {
+            "id": 4,
+            "name": "José",
+            "author_id": 1
+        },
+        {
+            "id": 5,
+            "name": "João",
+            "author_id": 2
+        }
+    ]
 }
