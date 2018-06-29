@@ -27,6 +27,7 @@ app.get('/api/async-await/authors', async (req, res) => {
         }
 
         // Processando array em sequência
+        
         const { authors } = authorResult;
         const countAuthors = authorResult.authors.length;
         for (let i = 0; i < countAuthors; i++) {
@@ -63,7 +64,6 @@ app.get('/api/async-await/authors', async (req, res) => {
         await Promise.all(promises);
         */
 
-        //
         res.send(authors);
     } catch (e) {
         console.log(e)
