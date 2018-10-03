@@ -17,7 +17,7 @@ console.log("hello");
 var s = http.Server(function (req, res) {
 	res.writeHead(200);
 	setTimeout(function () {
-		res.end('hello world\n');
+		res.end('hello world');
 	}, 1000);
 });
 s.listen(8000);

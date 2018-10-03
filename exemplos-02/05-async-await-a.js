@@ -2,7 +2,7 @@
  * Example A - Async / Await
  */
 
-import axios from 'axios'
+const axios = require('axios')
 
 const service = {
     getPosts: () => axios({ url: 'http://localhost:3004/posts' }),
@@ -10,6 +10,7 @@ const service = {
 }
 
 async function asyncAwaitExampleA() {
+    console.time('timer')
     try {
         const posts = await service.getPosts()
         const comments = await service.getComments()
@@ -18,6 +19,7 @@ async function asyncAwaitExampleA() {
             posts: posts.data,
             comments: comments.data
         })
+        console.timeEnd('timer')
     } catch (err) {
         console.error(err)
     }

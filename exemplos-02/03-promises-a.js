@@ -2,7 +2,7 @@
  * Example A - Promises
  */
 
-import axios from 'axios'
+const  axios = require('axios')
 
 const service = {
     getPosts: () => axios({ url: 'http://localhost:3004/posts' }),
@@ -10,6 +10,7 @@ const service = {
 }
 
 function promisesExampleA() {
+    console.time('timer')
     let obj = {}
 
     service.getPosts()
@@ -20,6 +21,7 @@ function promisesExampleA() {
         .then(response => {
             obj.comments = response.data
             console.log('Example A\n', obj)
+            console.timeEnd('timer')
         })
         .catch(err => {
             console.log(err)

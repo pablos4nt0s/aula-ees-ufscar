@@ -2,7 +2,7 @@
  * Example B - Promises with Promise.all()
  */
 
-import axios from 'axios'
+const axios = require ('axios')
 
 const service = {
     getPosts: () => axios({ url: 'http://localhost:3004/posts' }),
@@ -10,9 +10,13 @@ const service = {
 }
 
 function promisesExampleB() {
+    console.time('timer')
     Promise.all([service.getPosts(), service.getComments()])
         .then(values => {
             console.log('Example B\n', values.map(v => v.data))
+        })
+        .then (() => {
+            console.timeEnd('timer')
         })
         .catch(err => {
             console.log(err)

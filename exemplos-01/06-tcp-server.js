@@ -5,7 +5,7 @@ var server = net.createServer(function (socket) {
 	socket.write('world\n');
 
 	socket.on('data', function (data) {
-		socket.write(data);
+		socket.write('resposta: :' + data);
 	});
 });
 

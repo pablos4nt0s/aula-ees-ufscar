@@ -2,10 +2,12 @@
  * Example - Callback 
  */
 
- import request from 'request'
+ const  request = require('request')
 
 function callbackExample() {
     const obj = {}
+
+    console.time('timer')
 
     request.get({ url: 'http://localhost:3004/posts', json: true }, (err, response, body) => {
         if (err) {
@@ -20,6 +22,7 @@ function callbackExample() {
                     obj.comments = body
                     console.log('Example\n', obj)
                 }
+                console.timeEnd('timer')
             })
         }
     })
